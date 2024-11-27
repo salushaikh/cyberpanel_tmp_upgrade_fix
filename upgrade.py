@@ -842,7 +842,7 @@ $cfg['Servers'][$i]['LogoutURL'] = 'phpmyadminsignin.php?logout';
                 cursor.execute("UPDATE loginSystem_acl SET config = '%s' where name = 'admin'" % (Upgrade.AdminACL))
             except BaseException as msg:
                 print(str(msg))
-                import sleep
+                from time import sleep
                 sleep(10)
 
             try:
